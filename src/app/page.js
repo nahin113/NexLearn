@@ -1,9 +1,10 @@
+import HeroSlider from "@/components/home/HeroSlider";
 
 
 export default function Home() {
   return (
-    <div>
-      <h2>This is Home Page</h2>
+    <div className="container mx-auto">
+      <HeroSlider></HeroSlider>
     </div>
   );
 }
