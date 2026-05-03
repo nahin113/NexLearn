@@ -27,7 +27,10 @@ const UserProfile = () => {
           <div className="avatar mb-4">
             <div className="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
               <img
-                src={user?.image || "https://i.pravatar.cc/300"}
+                src={
+                  user?.image ||
+                  "https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg"
+                }
                 alt={user?.name || "User"}
               />
             </div>

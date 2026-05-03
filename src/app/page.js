@@ -8,7 +8,7 @@ import TrendingCourses from "@/components/home/TrendingCourses";
 export default function Home() {
   return (
     <div className="bg-base-200">
-      <div className="container mx-auto space-y-4">
+      <div className="lg:container mx-auto space-y-4">
         <HeroSlider></HeroSlider>
         <PopularCourses></PopularCourses>
         <LearningTips></LearningTips>

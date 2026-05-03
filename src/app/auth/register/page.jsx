@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
+import LoginWithGoogle from "@/components/ui/LoginWithGoogle";
+import { redirect } from "next/navigation";
 
 const RegisterPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +30,7 @@ const RegisterPage = () => {
 
     if (res) {
       toast.success("SignUp Successful");
-      redirect("/");
+      redirect("/auth/login");
     }
     if (error) toast.error(error.message);
   };
@@ -110,6 +112,7 @@ const RegisterPage = () => {
             Login
           </Link>
         </p>
+        <LoginWithGoogle></LoginWithGoogle>
       </div>
     </div>
   );
