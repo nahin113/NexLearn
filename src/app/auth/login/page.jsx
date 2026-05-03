@@ -1,12 +1,12 @@
 "use client";
-// import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
-import { FaGoogle} from "react-icons/fa";
+import LoginWithGoogle from "@/components/ui/LoginWithGoogle";
 
 const handleLoginFunc = async (data) => {
   const { email, password } = data;
@@ -22,8 +22,6 @@ const handleLoginFunc = async (data) => {
   if (error) toast.error(error.message);
 };
 
-// const authClient = createAuthClient();
-
 const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const {
@@ -33,12 +31,12 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
-  const handleGoogleSignIn = async () => {
-    const data = await authClient.signIn.social({
-      provider: "google",
-    });
-    console.log(data);
-  }; 
+  //   const handleGoogleSignIn = async () => {
+  //     const data = await authClient.signIn.social({
+  //       provider: "google",
+  //     });
+  //     console.log(data);
+  //   };
   return (
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-base-200">
       <div className="p-30 rounded-xl bg-white">
@@ -91,15 +89,7 @@ const LoginPage = () => {
             register
           </Link>
         </p>
-        <div className="flex flex-col gap-2 pt-4">
-          <button
-            onClick={handleGoogleSignIn}
-            className="btn btn-outline border-blue-500 text-blue-500 hover:bg-blue-500 hover:border-blue-500 hover:text-white flex items-center gap-3 w-full"
-          >
-            <FaGoogle className="text-lg" />
-            <span>Login with Google</span>
-          </button>
-        </div>
+        <LoginWithGoogle></LoginWithGoogle>
       </div>
     </div>
   );
