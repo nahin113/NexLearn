@@ -6,20 +6,6 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
-const handleRegisterFunc = async (data) => {
-  const { name, email, password, Photo_URL } = data;
-
-  const { data: res, error } = await authClient.signUp.email({
-    name: name, 
-    email: email, 
-    password: password, 
-    image: Photo_URL,
-    callbackURL: "/",
-  });
-
-  if (res) toast.success("SignUp Successful");
-  if (error) toast.error(error.message);
-};
 
 const RegisterPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,6 +15,23 @@ const RegisterPage = () => {
     watch,
     formState: { errors },
   } = useForm();
+
+  const handleRegisterFunc = async (data) => {
+    const { name, email, password, Photo_URL } = data;
+
+    const { data: res, error } = await authClient.signUp.email({
+      name: name,
+      email: email,
+      password: password,
+      image: Photo_URL,
+    });
+
+    if (res) {
+      toast.success("SignUp Successful");
+      redirect("/");
+    }
+    if (error) toast.error(error.message);
+  };
   return (
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-base-200">
       <div className="p-30 rounded-xl bg-white">

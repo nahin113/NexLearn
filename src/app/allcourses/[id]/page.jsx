@@ -1,12 +1,16 @@
 import CourseActions from "@/components/ui/CourseActions";
 import { fetchCourseinfoDetailed } from "@/data/data";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { GoStarFill } from "react-icons/go";
 import { toast } from "react-toastify";
 
 const CourseDetails = async ({ params }) => {
   const { id } = await params;
   const course = await fetchCourseinfoDetailed(id);
+if (!course || !course.curriculum) {
+  notFound();
+}
   return (
     <div className="bg-base-100 min-h-screen py-10 px-6">
       <div className="max-w-7xl mx-auto">

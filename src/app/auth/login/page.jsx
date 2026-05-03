@@ -9,22 +9,6 @@ import { AiFillEyeInvisible } from "react-icons/ai";
 import LoginWithGoogle from "@/components/ui/LoginWithGoogle";
 import { redirect } from "next/navigation";
 
-const handleLoginFunc = async (data) => {
-  const { email, password } = data;
-
-  const { data: res, error } = await authClient.signIn.email({
-    email: email,
-    password: password,
-    rememberMe: true,
-  });
-
-  if (res) {
-    toast.success("Login Successful");
-    redirect("/");
-  }
-  if (error) toast.error(error.message);
-};
-
 const LoginPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const {
@@ -34,6 +18,21 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
+  const handleLoginFunc = async (data) => {
+    const { email, password } = data;
+
+    const { data: res, error } = await authClient.signIn.email({
+      email: email,
+      password: password,
+      rememberMe: true,
+    });
+
+    if (res) {
+      toast.success("Login Successful");
+      redirect("/");
+    }
+    if (error) toast.error(error.message);
+  };
   return (
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-base-200">
       <div className="p-30 rounded-xl bg-white">
