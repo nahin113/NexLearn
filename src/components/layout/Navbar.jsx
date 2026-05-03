@@ -17,7 +17,7 @@ const Navbar = () => {
   const user = session?.user;
   return (
     <div className="bg-base-100 shadow-sm mb-1">
-      <div className="navbar container mx-auto">
+      <div className="navbar lg:container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -61,7 +61,7 @@ const Navbar = () => {
           ) : user ? (
             <div className="flex items-center gap-2">
               <Image
-                className="rounded-full w-[50px] h-[50px]"
+                className="rounded-full lg:w-[50px] lg:h-[50px]"
                 src={
                   user?.image ||
                   "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
@@ -70,7 +70,7 @@ const Navbar = () => {
                 height={40}
                 alt="User Avatar"
               />
-              <div>
+              <div className="hidden md:block">
                 <h2 className="font-semibold">{user?.name}</h2>
                 <h2>{user?.email}</h2>
               </div>
