@@ -4,11 +4,10 @@ import PopularCourses from "@/components/home/PopularCourses";
 import TopInstructors from "@/components/home/TopInstructors";
 import TrendingCourses from "@/components/home/TrendingCourses";
 
-
 export default function Home() {
   return (
     <div className="bg-base-200">
-      <div className="lg:container mx-auto space-y-4">
+      <div className="md:container mx-auto space-y-4">
         <HeroSlider></HeroSlider>
         <PopularCourses></PopularCourses>
         <LearningTips></LearningTips>
