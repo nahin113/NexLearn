@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import LoginWithGoogle from "@/components/ui/LoginWithGoogle";
+import { redirect } from "next/navigation";
 
 const handleLoginFunc = async (data) => {
   const { email, password } = data;
@@ -15,10 +16,12 @@ const handleLoginFunc = async (data) => {
     email: email,
     password: password,
     rememberMe: true,
-    callbackURL: "/",
   });
 
-  if (res) toast.success("Login Successful");
+  if (res) {
+    toast.success("Login Successful");
+    redirect("/");
+  }
   if (error) toast.error(error.message);
 };
 

@@ -2,6 +2,7 @@ import HeroSlider from "@/components/home/HeroSlider";
 import LearningTips from "@/components/home/LearningTips";
 import PopularCourses from "@/components/home/PopularCourses";
 import TopInstructors from "@/components/home/TopInstructors";
+import TrendingCourses from "@/components/home/TrendingCourses";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <HeroSlider></HeroSlider>
         <PopularCourses></PopularCourses>
         <LearningTips></LearningTips>
+        <TrendingCourses></TrendingCourses>
         <TopInstructors></TopInstructors>
       </div>
     </div>

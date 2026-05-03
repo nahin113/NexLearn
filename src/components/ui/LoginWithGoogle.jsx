@@ -1,12 +1,25 @@
 "use client";
 import { createAuthClient } from "better-auth/client";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 const authClient = createAuthClient();
 const LoginWithGoogle = () => {
   const handleGoogleSignIn = async () => {
-    const data = await authClient.signIn.social({
+    const {data,error} = await authClient.signIn.social({
       provider: "google",
+      callbackURL: "/"
     });
+
+    console.log(data,error)
+
+if (error) {
+  toast.error(error.message || "Google Sign-In failed");
+  return;
+}
+
+if (data) {
+  toast.success("Login Successful");
+}
   };
   return (
     <div className="flex flex-col gap-2 pt-4">

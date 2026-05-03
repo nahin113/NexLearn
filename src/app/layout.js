@@ -27,9 +27,9 @@ export default function RootLayout({ children }) {
       data-theme="light"
     >
       <body className="min-h-full flex flex-col">
+        <ToastContainer />
         <Navbar></Navbar>
         <main>
-          <ToastContainer />
           {children}
         </main>
         <Footer></Footer>
