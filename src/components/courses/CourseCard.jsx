@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const CourseCard = ({ course }) => {
-  const { image, title, instructor, rating, trending, level } = course;
+  const { image, title, instructor, rating, trending, level ,id} = course;
   return (
     <div className="card bg-base-100 shadow-xl border border-base-200 hover:shadow-2xl transition-all duration-300">
       <figure className="px-4 pt-4">
@@ -40,7 +41,9 @@ const CourseCard = ({ course }) => {
         </div>
 
         <div className="card-actions justify-end mt-4 pt-4 border-t border-base-100">
+        <Link href={`/allcourses/${id}`}>
           <button className="btn btn-primary btn-block">View Details</button>
+            </Link>
         </div>
       </div>
     </div>

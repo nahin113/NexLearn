@@ -1,5 +1,6 @@
 import { fetchCourseDetails } from "@/data/data";
 import CourseCard from "../courses/CourseCard";
+import Link from "next/link";
 
 const Rated = await fetchCourseDetails();
 
@@ -19,9 +20,11 @@ const PopularCourses = () => {
               Top 3 highest-rated courses by our community
             </p>
           </div>
-          <button className="btn btn-ghost btn-sm text-primary">
-            See all courses →
-          </button>
+          <Link href="/allcourses">
+            <button className="btn btn-ghost btn-sm text-primary">
+              See all courses →
+            </button>
+          </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {topThreeRated.map((course) => (

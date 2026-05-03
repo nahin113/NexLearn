@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const HeroSlider = () => {
   return (
     <div className="hero bg-base-200 pt-6 border-b border-base-200">
@@ -18,19 +21,21 @@ const HeroSlider = () => {
 
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               <button className="btn btn-primary px-8">Get Started</button>
+              <Link href="/allcourses">
               <button className="btn btn-outline">View All Courses</button>
+              </Link>
             </div>
 
             <div className="mt-8 flex items-center gap-4 text-sm opacity-70 justify-center lg:justify-start">
               <div className="avatar-group -space-x-4">
                 <div className="avatar w-8 border-base-100">
-                  <img src="https://i.pravatar.cc/100?img=1" alt="user" />
+                  <Image src="https://i.pravatar.cc/100?img=1" alt="user" height={50} width={50} />
                 </div>
                 <div className="avatar w-8 border-base-100">
-                  <img src="https://i.pravatar.cc/100?img=2" alt="user" />
+                  <Image src="https://i.pravatar.cc/100?img=2" alt="user" height={50} width={50} />
                 </div>
                 <div className="avatar w-8 border-base-100">
-                  <img src="https://i.pravatar.cc/100?img=3" alt="user" />
+                  <Image src="https://i.pravatar.cc/100?img=3" alt="user" height={50} width={50} />
                 </div>
               </div>
               <p>Joined by 10k+ students</p>

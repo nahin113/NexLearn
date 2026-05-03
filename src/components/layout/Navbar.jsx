@@ -3,7 +3,7 @@ import Link from "next/link";
 const links = (
   <>
     <Link href="/">Home</Link>
-    <Link href="/" >Courses</Link>
+    <Link href="/allcourses" >Courses</Link>
     <Link href="/">My Profile</Link>
   </>
 );
