@@ -8,7 +8,7 @@ const links = (
   <>
     <NavLink href="/">Home</NavLink>
     <NavLink href="/allcourses">Courses</NavLink>
-    <NavLink href="/">My Profile</NavLink>
+    <NavLink href="/profile">My Profile</NavLink>
   </>
 );
 

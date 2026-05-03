@@ -34,12 +34,6 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
-  //   const handleGoogleSignIn = async () => {
-  //     const data = await authClient.signIn.social({
-  //       provider: "google",
-  //     });
-  //     console.log(data);
-  //   };
   return (
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-base-200">
       <div className="p-30 rounded-xl bg-white">
