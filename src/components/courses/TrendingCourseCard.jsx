@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TrendingCourses from "../home/TrendingCourses";
+import { GoStarFill } from "react-icons/go";
 
 const TrendingCoursesCard = ({ tc }) => {
   const { image, title, instructor, rating, id } = tc;
@@ -27,7 +28,9 @@ const TrendingCoursesCard = ({ tc }) => {
         <div className="divider my-2"></div>
 
         <div className="card-actions justify-between items-center">
-          <span className="text-sm font-bold text-primary">⭐ {rating}</span>
+          <span className="text-sm font-bold text-primary flex gap-2">
+            <GoStarFill className="text-amber-400 w-5 h-5" /> {rating}
+          </span>
           <Link href={`/allcourses/${id}`}>
             <button className="btn btn-primary btn-xs">View Details</button>
           </Link>

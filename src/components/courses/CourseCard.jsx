@@ -17,7 +17,6 @@ const CourseCard = ({ course }) => {
       <div className="card-body">
         <div className="flex justify-between items-start">
           <h3 className="card-title text-lg">{title}</h3>
-          {trending && <div className="badge badge-secondary">Trending</div>}
         </div>
         <p className="text-sm text-base-content/70">
           Instructor: <span className="font-semibold">{instructor}</span>
