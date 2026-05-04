@@ -16,7 +16,7 @@ const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
   return (
-    <div className="bg-base-100 shadow-sm mb-1">
+    <div className="bg-base-100 shadow-sm mb-[70px] lg:mb-[1px]">
       <div className="navbar lg:container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
