@@ -1,4 +1,4 @@
-# 🎓 NexLearn
+# NexLearn
 
 ### *Your Gateway to Skill-Based Learning*
 
@@ -6,40 +6,41 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![BetterAuth](https://img.shields.io/badge/BetterAuth-Latest-6C63FF?style=for-the-badge&logo=auth0&logoColor=white)](https://better-auth.com/)
 
-**[🌐 Live Demo](https://nexlearn-livid.vercel.app/)** · **[📁 Repository](https://github.com/nahin113/NexLearn)**
+**[Live Demo](https://nexlearn-livid.vercel.app/)** · **[Repository](https://github.com/nahin113/NexLearn)**
 
-<!-- ![NexLearn Banner](https://i.postimg.cc/your-banner-image.png) -->
+
+![NexLearn Preview](./screenshot.png)
 
 
 ---
 
-## 📖 Overview
+## Overview
 
-**NexLearn** is a modern, full-featured online learning platform built with Next.js 15 App Router. It empowers learners to discover, explore, and enroll in skill-based courses spanning Web Development, UI/UX Design, Digital Marketing, and more — all from a beautifully crafted, fully responsive interface.
+**NexLearn** is a modern, full featured online learning platform built with Next.js 15 App Router. It empowers learners to discover, explore, and enroll in skill based courses spanning Web Development, UI/UX Design, Digital Marketing, and more all from a beautifully crafted, fully responsive interface.
 
 Whether you're an absolute beginner or looking to level up your expertise, NexLearn connects you with top instructors and structured curricula to help you grow at your own pace.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- 🎠 **Dynamic Hero Slider** — Smooth Swiper.js-powered banner with course highlights and CTAs
-- 📚 **Course Catalog** — Browse all available courses with category filters and real-time search by title
-- 🔍 **Search Functionality** — Instantly find courses by name on the All Courses page
-- ⭐ **Popular Courses** — Home page spotlights the top 3 highest-rated courses
-- 🔒 **Protected Course Details** — Full curriculum and details accessible only to authenticated users
-- 🔐 **Authentication** — Secure login & registration with Email/Password + Google OAuth via BetterAuth
-- 👤 **My Profile Page** — View and update your display name and profile photo
-- 🏆 **Top Instructors Section** — Showcases featured course instructors
-- 💡 **Learning Tips Section** — Study techniques and time management advice
-- 🔔 **Toast Notifications** — Real-time feedback for all user actions
-- 📱 **Fully Responsive** — Optimized for mobile, tablet, and desktop
-- 🌀 **Loading Indicators** — Skeleton loaders during data fetches
-- 🚫 **Custom 404 Page** — Friendly not-found experience for invalid routes
+• **Dynamic Hero Slider** - Smooth Swiper.js-powered banner with course highlights and CTAs
+• **Course Catalog** - Browse all available courses with category filters and real-time search by title
+• **Search Functionality** - Instantly find courses by name on the All Courses page
+• **Popular Courses** - Home page spotlights the top 3 highest-rated courses
+• **Protected Course Details** - Full curriculum and details accessible only to authenticated users
+• **Authentication** - Secure login & registration with Email/Password + Google OAuth via BetterAuth
+• **My Profile Page** - View and update your display name and profile photo
+• **Top Instructors Section** - Showcases featured course instructors
+• **Learning Tips Section** - Study techniques and time management advice
+• **Toast Notifications** - Real-time feedback for all user actions
+• **Fully Responsive** - Optimized for mobile, tablet, and desktop
+• **Loading Indicators** - Skeleton loaders during data fetches
+• **Custom 404 Page** - Friendly not-found experience for invalid routes
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technology |
 |---|---|
@@ -52,7 +53,7 @@ Whether you're an absolute beginner or looking to level up your expertise, NexLe
 
 ---
 
-## 📦 NPM Packages
+## NPM Packages
 
 | Package | Purpose |
 |---|---|
@@ -68,7 +69,7 @@ Whether you're an absolute beginner or looking to level up your expertise, NexLe
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nexlearn/
@@ -101,9 +102,9 @@ nexlearn/
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
-Create a `.env.local` file in the root directory and populate it with the following:
+Create a `.env` file in the root directory and populate it with the following:
 
 ```env
 # BetterAuth
@@ -118,11 +119,11 @@ GOOGLE_CLIENT_SECRET=your_google_client_secret
 DATABASE_URL=your_database_url
 ```
 
-> ⚠️ **Never commit `.env.local` to version control.** It is included in `.gitignore` by default.
+>  **Never commit `.env` to version control.** It is included in `.gitignore` by default.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -136,7 +137,7 @@ DATABASE_URL=your_database_url
 git clone https://github.com/nahin113/NexLearn.git
 
 # 2. Navigate to the project directory
-cd skillsphere
+cd NexLearn
 
 # 3. Install dependencies
 npm install
@@ -154,29 +155,26 @@ Open (http://localhost:3000) in your browser to see the app.
 ---
 
 
-## 🗺️ Pages & Routes
+## Pages & Routes
 
 | Route | Description | Access |
 |---|---|---|
 | `/` | Home — Hero, Popular Courses, Tips, Instructors | Public |
 | `/courses` | All courses with search functionality | Public |
-| `/courses/[id]` | Full course details & curriculum | 🔒 Protected |
-| `/my-profile` | View logged-in user profile | 🔒 Protected |
-| `/my-profile/update` | Update name and profile photo | 🔒 Protected |
+| `/courses/[id]` | Full course details & curriculum | Protected |
+| `/my-profile` | View logged-in user profile | Protected |
+| `/my-profile/update` | Update name and profile photo | Protected |
 | `/login` | Email/Password + Google OAuth login | Public |
 | `/register` | User registration form | Public |
 
 ---
 
-## 👨‍💻 Author
+## Author
 
-**Your Name**
+**Nahin Ahmed**
 
-[![LinkedIn](https://www.linkedin.com/in/nahin-ahmed-bd/)
-[![GitHub](https://github.com/nahin113)
-[![Portfolio](https://nahinportfolio-ten.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nahin-ahmed-bd/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/nahin113)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://nahinahmed.vercel.app)
 
 ---
-
-
-⭐ **If you found this project helpful, please give it a star!** ⭐
